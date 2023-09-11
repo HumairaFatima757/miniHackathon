@@ -1,0 +1,143 @@
+<title>Admin Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Reset some default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply styles to the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('./woman-hand-writing-attendance-marker-blue-background-professionally-79573891.jpg'); 
+        background-size: 100% 100%; /* Stretch the background image to cover the entire viewport */
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Optional: To fix the background image so it doesn't scroll with the page */
+    }
+
+/* Style the page title */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style the student info form */
+#studentInfo {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Style form labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Style input fields */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Style file input and button */
+#imageInput {
+    margin-top: 10px;
+}
+
+#generateIDCard {
+    display: block;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#generateIDCard:hover {
+    background-color: #0056b3;
+}
+
+/* Style the ID Card */
+#idCard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+}
+
+#idCard h2 {
+    color: #333;
+    text-align: center;
+}
+
+/* Style buttons inside the ID Card */
+#saveToFirebase {
+    display: block;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#saveToFirebase:hover {
+    background-color: #1d9239;
+}
+
+/* Add a class to show the ID Card */
+.show {
+    display: block;
+}
+
+</style>
+<body>
+    <h1>Student  Interface</h1>
+    <div id="studentInfo">
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" placeholder="Enter Name">
+        <label for="fatherNameInput">Father's Name:</label>
+        <input type="text" id="fatherNameInput" placeholder="Enter Father's Name">
+        
+        <input type="file" id="imageInput" accept="image/*">
+        <button id="generateIDCard">Generate ID Card</button>
+    </div>
+    <div id="idCard" class="hidden">
+        <!-- Placeholder for generated ID Card UI -->
+        <h2>ID Card</h2>
+        <div id="studentDetails">
+            <!-- Student details will be displayed here -->
+        </div>
+        <button id="saveToFirebase">Save to Firebase</button>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js"></script>
+
+    <script src="./config.js"></script>
+    <script src="./add.js"></script>

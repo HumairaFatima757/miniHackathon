@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('./woman-hand-writing-attendance-marker-blue-background-professionally-79573891.jpg'); 
+        background-size: 100% 100%; /* Stretch the background image to cover the entire viewport */
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Optional: To fix the background image so it doesn't scroll with the page */
+    }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #classForm {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        select, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #classTable {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px 12px;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Class Management</title>
+    </head>
+    <body>
+        <form id="classForm">
+            <select id="teacherName" required>
+                <option value="Miss Hina">Miss Hina</option>
+                <option value="Miss Tayyaba">Miss Tayyaba</option>
+                <option value="Miss Qurat ul Ain">Miss Qurat ul Ain</option>
+            </select>
+            <select id="batchNumber" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select id="courseName" required>
+                <option value="Web Development">Web Development</option>
+                <option value="AI">AI</option>
+                <option value="Cyber Security">Cyber Security</option>
+                <!-- Add more courses here -->
+            </select>
+            <input type="text" id="sectionName" placeholder="Section Name" required>
+            <input type="submit" value="Add Class">
+        </form>
+        
+    
+        <!-- Table to Display Class Details -->
+        <table id="classTable">
+            <thead>
+                <tr>
+                    <th>Teacher's Name</th>
+                    <th>Section Name</th>
+                    <th>Course Name</th>
+                    <th>Batch Number</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="classList">
+             
+            </tbody>
+        </table>
+    
+    
+    
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js"></script>
+
+    <script src="./config.js"></script>
+    <script src="./class.js"></script>
+
+
+</body>
+</html>

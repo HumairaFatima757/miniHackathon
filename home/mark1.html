@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply styles to the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('./woman-hand-writing-attendance-marker-blue-background-professionally-79573891.jpg'); 
+        background-size: 100% 100%; /* Stretch the background image to cover the entire viewport */
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Optional: To fix the background image so it doesn't scroll with the page */
+    }
+/* Style the page title */
+h1 {
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Style form elements */
+div {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button#changeStatus {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Style select dropdown */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M5 6L0 1h10L5 6z' fill='%23007BFF'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    padding-right: 30px;
+}
+</style>
+</head>
+<body>
+    <h1>Student Attendance</h1>
+    <div>
+        <label for="rollNumberInput">Enter Your Roll Number:</label>
+        <input type="text" id="rollNumberInput" placeholder="Enter Roll Number">
+        <label for="attendanceStatus">Select Status:</label>
+        <select id="attendanceStatus">
+            <option value="present">Present</option>
+            <option value="absent">Absent</option>
+            <option value="leave">Leave</option>
+        </select>
+        <button id="markAttendance">Mark Attendance</button>
+    </div>
+    <div>
+        <button id="changeStatus">Change Status</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="../config.js"></script>
+    <script src="./mark1.js"></script>
+</body>
+</html>

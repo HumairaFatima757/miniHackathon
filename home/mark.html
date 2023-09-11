@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('./woman-hand-writing-attendance-marker-blue-background-professionally-79573891.jpg'); 
+        background-size: 100% 100%; /* Stretch the background image to cover the entire viewport */
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Optional: To fix the background image so it doesn't scroll with the page */
+    }
+
+    h1 {
+        text-align: center;
+        background-color: #007BFF;
+        color: white;
+        padding: 20px;
+        margin: 0;
+    }
+
+    #studentSection, #adminSection {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    #adminStatusText {
+        font-weight: bold;
+    }
+</style>
+<body>
+
+    <h1>Student Attendance</h1>
+    <div id="studentSection">
+        <h2>Student Section</h2>
+        <label for="studentRollNumberInput">Enter Your Roll Number:</label>
+        <input type="text" id="studentRollNumberInput" placeholder="Enter Roll Number">
+        <button id="markAttendance">Mark Attendance</button>
+        <div>
+            <label for="attendanceStatus">Select Status:</label>
+            <select id="attendanceStatus">
+                <option value="present">Present</option>
+                <option value="absent">Absent</option>
+                <option value="leave">Leave</option>
+                <option value="late">Late</option>
+            </select>
+            <button id="changeStatus">Change Status</button>
+        </div>
+    </div>
+    <div id="adminSection">
+        <h2>Admin Section</h2>
+        <label for="adminRollNumberInput">Enter Student's Roll Number:</label>
+        <input type="text" id="adminRollNumberInput" placeholder="Enter Roll Number">
+        <div id="attendanceStatus">Attendance Status: <span id="adminStatusText"></span></div>
+        <label for="adminNewStatusInput">Select New Status:</label>
+        <select id="adminNewStatusInput">
+            <option value="present">Present</option>
+            <option value="absent">Absent</option>
+            <option value="leave">Leave</option>
+            <option value="late">Late</option>
+        </select>
+        <button id="updateAttendance">Update Attendance</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management</title>
+</head>
+
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('./woman-hand-writing-attendance-marker-blue-background-professionally-79573891.jpg'); 
+        background-size: 100% 100%; /* Stretch the background image to cover the entire viewport */
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Optional: To fix the background image so it doesn't scroll with the page */
+    }
+
+        h1 {
+            text-align: center;
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        div {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="file"] {
+            margin-top: 10px;
+        }
+
+        button[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        ul#studentList {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul#studentList li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</style>
+<body>
+    <h1>Student Management System</h1>
+    <div>
+        <h2>Add Student</h2>
+        <form id="studentForm">
+            <input type="text" id="name" placeholder="Name" required /><br />
+            <input type="text" id="fatherName" placeholder="Father's Name" required /><br />
+            <input type="text" id="rollNumber" placeholder="Roll Number" required /><br />
+            <input type="text" id="contactNumber" placeholder="Contact Number" required /><br />
+            <input type="text" id="cnicNumber" placeholder="CNIC Number" required /><br />
+            <input type="text" id="courseName" placeholder="Course Name" required /><br />
+            <input type="text" id="classAssigned" placeholder="Class Assigned" required /><br />
+            <input type="file" id="picture" accept="image/*" required /><br />
+            <button type="submit">Add Student</button>
+        </form>
+    </div>
+    <hr />
+    <div>
+        <h2>Student List</h2>
+        <ul id="studentList"></ul>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js"></script>
+
+    <script src="./config.js"></script>
+    <script src="./stdinfo.js"></script>
+</body>
+</html>
